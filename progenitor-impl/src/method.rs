@@ -1258,6 +1258,8 @@ impl Generator {
             .map(|response| response.typ.clone())
             .collect::<BTreeSet<_>>();
 
+        dbg!(&response_types);
+
         // TODO to deal with multiple response types, we'll need to create an
         // enum type with variants for each of the response types.
         assert!(response_types.len() <= 1);
